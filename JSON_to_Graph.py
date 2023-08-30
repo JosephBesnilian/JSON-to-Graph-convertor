@@ -63,7 +63,7 @@ def convert_layout_to_graph(layout):
 
 
 
-def visualize_graph(graph):
+def visualize_graph(graph, blockName):
     nodes_list = list(graph.nodes())
     first_node = nodes_list[0] if nodes_list else None
     
@@ -110,6 +110,7 @@ def visualize_graph(graph):
     # Visualize the graph using the hierarchical layout
     plt.figure(figsize=(200, 50))
     nx.draw(graph, pos, with_labels=True, node_size=5000,  font_size=26)
+    #plt.title(blockName)
     plt.title("Hierarchical Graph Visualization")
     plt.show()
     
